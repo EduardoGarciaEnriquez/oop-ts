@@ -16,12 +16,12 @@ export class ProductHttpService implements ProductService {
     return data;
   }
 
-  async findByIndex(id: string | number) {
+  async findByIndex(id: Product["id"]) {
     const { data } = await axios.get(`${this.url}${id}`);
     return data;
   }
 
-  async update(id: string | number, changes: UpdateProductDto) {
+  async update(id: Product["id"], changes: UpdateProductDto) {
     const { data } = await axios.put(`${this.url}${id}`, changes);
     return data;
   }
