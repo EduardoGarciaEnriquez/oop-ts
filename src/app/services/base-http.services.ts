@@ -19,6 +19,7 @@ export class BaseHttpService<TypeClass> {
     return data;
   }
 
+  //async function with generics for id and parsed changes
   async update<ID, DTO>(id: ID, changes: DTO) {
     const { data } = await axios.put(`${this.url}${id}`, changes);
     return data;
@@ -40,6 +41,7 @@ async function testGenericsInMethods() {
   //baseHTTPServices instances with category and product interfaces types as generics
   const product_service = new BaseHttpService<Product>(product_url);
 
+  // generics fot update method
   const products_response = await product_service.update<
     Product["id"],
     UpdateProductDto
