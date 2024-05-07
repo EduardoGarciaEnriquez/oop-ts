@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-import { Product } from "../../async/models/product.model";
+import { Product } from "../models/product.model";
 import { CreateProductDto, UpdateProductDto } from "../dtos/product.dto";
 
 export class ProductMemoryService {

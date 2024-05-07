@@ -1,6 +1,6 @@
 /*tipado fuerte en promesas*/
 import axios from "axios";
-import { Product } from "./models/product.model";
+import { Product } from "../app/models/product.model";
 
 (async () => {
   // tipado hacia afuera, es decir tipar que es lo que va a retornar
